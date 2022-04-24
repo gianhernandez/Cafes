@@ -1,0 +1,62 @@
+
+body {
+    background-color: lightgrey;
+}
+
+/* Classes */
+.card {
+    margin: 10%;
+}
+
+.card-img-top {
+
+    height: 215px !important;
+}
+
+.control-label {
+    font-size: 1.2rem;
+}
+
+.copyright {
+    margin: 1%;
+}
+
+.form {
+    margin: 3%
+}
+
+.masthead {
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+    width: 100%;
+}
+
+.site-heading {
+  color: black;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social {
+    color: white;
+    padding: 1%;
+}
+
+
+/* ID Tags */
+
+#submit {
+    margin: 20px 0 10px;
+}
+
+#footer {
+    background-color: #212529;
+    color: white;
+    padding: 3%;
+    text-align: center;
+}
+

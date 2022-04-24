@@ -1,0 +1,48 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="container">
+        <div class="row">
+
+            <h1>All Cafes</h1>
+        <br/>
+                {% for cafe in cafes %}
+                    <div class="col-lg-4 col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ cafe.img_url }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ cafe.name }}</h5>
+                            <p class="card-text">{{ cafe.location }} <a href="{{ cafe.map_url }}">Google Maps</a><br/>
+                                <p>
+                                {% if cafe.has_sockets %}
+                                    <i class="fa-solid fa-plug"></i>
+
+                                {% endif %}
+                            {% if cafe.has_toilet %}
+                                <i class="fa-solid fa-restroom"></i>
+
+                            {% endif %}
+                            {% if cafe.has_wifi %}
+                                <i class="fa-solid fa-wifi"></i>
+
+                            {% endif %}
+                            {% if cafe.can_take_calls %}
+                                <i class="fa-solid fa-phone"></i>
+                                </p>
+
+                            {% endif %}
+                            <p>Seats: {{ cafe.seats }}</p>
+                            <p>Coffee Price: {{ cafe.coffee_price }}</p>
+                            <br/>
+                            <a href="{{ url_for('delete_cafe', cafe_id=cafe.id) }}" class="btn btn-secondary">Delete</a>
+                        </div>
+                    </div>
+
+            </div>
+
+                {% endfor %}
+ </div>
+    </div>
+{% endblock %}
